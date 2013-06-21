@@ -1,14 +1,13 @@
 import netifaces
 import datetime
+import calendar
 
 def dateTesting():
-	now = datetime.datetime.today() 
-	for i in range(1, now.day+1):
-			print '%d / %d/%d'%( now.year, now.month, i )
+	print calendar.monthrange(2013, 2)[1]
 	
 if __name__ == '__main__':
-		dateTesting()
-		'''print netifaces.interfaces()
+		#dateTesting()
+		print netifaces.interfaces()
 		print 'AF_INET: %d, AF_LINK: %d' %(netifaces.AF_INET, netifaces.AF_LINK)
 		for i in netifaces.interfaces():
 				print i
@@ -19,6 +18,6 @@ if __name__ == '__main__':
 								print '\t%s'%(netifaces.ifaddresses(i)[netifaces.AF_INET][0]['addr'])
 						if None != netifaces.ifaddresses(i)[netifaces.AF_LINK]:
 								print '\t%s'%(netifaces.ifaddresses(i)[netifaces.AF_LINK][0]['addr'])
-								'''
+								
 #		print netifaces.ifaddresses('eth0')[netifaces.AF_INET][0]['addr']
 #		print netifaces.ifaddresses('eth0')[netifaces.AF_LINK][0]['addr']
